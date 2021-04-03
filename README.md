@@ -32,11 +32,19 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. What is React JS and what problems does it solve? Support your answer with concepts introduced in class and from your personal research on the web.
 
+A. React JS is a javascript frame work. That means it builds ontop of vanilla javascript functionality. It allows us to build components easily and house all of the code for each component in the same place.
+
 1. Describe component state.
+
+A. State is how React knows to update the DOM or not. It tracks whether or not there have been any changes and if there has React will look and see what components if any need to be changed on the page and update them.
 
 1. Describe props.
 
+A. Props are the method for passing state, callbacks and variables down from parent components to child components.
+
 1. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
+
+A. A side effect in React is another task that takes place at the same time as a change in State. with the useEffect function you can specify what is to happen as well as which state change the function should run during.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
