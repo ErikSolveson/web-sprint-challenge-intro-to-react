@@ -1,4 +1,8 @@
-import React, { useState } from "react";
+import axios from "axios";
+import { response } from "msw";
+import { set } from "msw/lib/types/context";
+// import { data } from "msw/lib/types/context";
+import React, { useEffect, useState } from "react";
 import "./App.css";
 import Character from "./components/Character";
 
@@ -10,6 +14,15 @@ const App = () => {
   // Fetch characters from the API in an effect hook. Remember, anytime you have a
   // side effect in a component, you want to think about which state and/or props it should
   // sync up with, if any.
+  useEffect(() => {
+    const newCharacters = axios
+      .get(`https://swapi.dev/api/people`)
+      .then((response) => {
+        console.log(response.data);
+        return response.data;
+      });
+    setCharacters(newCharacters);
+  });
 
   return (
     <div className="App">

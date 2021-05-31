@@ -2,7 +2,11 @@
 import React from "react";
 
 function Character(props) {
-  return <></>;
+  return (
+    <>
+      <h2>Characters</h2>
+    </>
+  );
 }
 
 export default Character;
